@@ -4,7 +4,6 @@ import java.awt.Color;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import com.sun.javaws.exceptions.InvalidArgumentException;
 import cz.fi.muni.carshop.CarShopStorage;
 import cz.fi.muni.carshop.entities.Car;
 import cz.fi.muni.carshop.enums.CarTypes;
