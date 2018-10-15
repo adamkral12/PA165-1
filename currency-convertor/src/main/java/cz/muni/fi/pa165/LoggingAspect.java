@@ -13,11 +13,13 @@ public class LoggingAspect {
 
         System.err.println("Calling method: "
                 + joinPoint.getSignature());
+        long start = System.currentTimeMillis();
 
         Object result = joinPoint.proceed();
 
+        long end = System.currentTimeMillis();
         System.err.println("Method finished: "
-                + joinPoint.getSignature());
+                + joinPoint.getSignature() + ", start: " + start + ", end: " + end);
 
         return result;
     }
