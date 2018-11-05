@@ -34,6 +34,19 @@ public class ExampleController {
     @Autowired
     private MessageSource messageSource; //resource bundle provided by Spring
 
+    @RequestMapping(value = "/bar", method = RequestMethod.GET)
+    public String bar(
+            @RequestParam String c,
+            @RequestParam int d,
+            @RequestParam boolean e,
+            Model model
+    ) {
+        model.addAttribute("c", c);
+        model.addAttribute("d", d);
+        model.addAttribute("e", e);
+        return "bar";
+    }
+
     /**
      * Example method. Shows what is possible to receive from SpringMVC as method parameters,
      * how to pass values through Model to view, and how to do redirects.

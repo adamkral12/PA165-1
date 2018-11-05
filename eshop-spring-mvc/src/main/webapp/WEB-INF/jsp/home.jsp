@@ -15,6 +15,10 @@
               role="button">Call ExampleController</a></p>
         <p><a class="btn btn-lg btn-success" href="${pageContext.request.contextPath}/shopping/show"
               role="button">Go shopping</a></p>
+
+        <c:forEach var = "i" begin = "1" end = "12">
+        <button class="col-xs-12 col-sm-6 col-md-2 col-lg-1">Button <c:out value = "${i}"/></button>
+        </c:forEach>
     </div>
 
 </jsp:attribute>
